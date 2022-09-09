@@ -1,0 +1,179 @@
+@ubuntu: 'Ubuntu',
+sans-serif;
+@hind: 'Hind',
+sans-serif;
+
+/* Global Variables Library */
+
+@body-color: #2f323e;
+@website-color: #117bb8;
+@brand_color: #e7225c;
+@black-color: #000;
+@white-color: #fff;
+@font1-color: #212121;
+@font2-color: #757575;
+@btn-color: #117bb8;
+@border-color: #ddd;
+
+@left: left;
+@right: right;
+/* MIXINS */
+
+.flex(){
+   display: -webkit-flex;
+    display: flex;
+}
+
+.listype(@list-style) {
+    list-style: @list-style;
+}
+.border-radius (@radius) {
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    border-radius: @radius;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+}
+.transform(@transform) {
+    -webkit-transform: @transform;
+    -moz-transform: @transform;
+    -o-transform: @transform;
+    -ms-transform: @transform;
+    transform: @transform;
+}
+.rotate (@deg) {
+    -webkit-transform: rotate(@deg);
+    -moz-transform: rotate(@deg);
+    -ms-transform: rotate(@deg);
+    -o-transform: rotate(@deg);
+}
+.transition (@transition: all .3s ease-in-out) {
+    -webkit-transition: @transition;
+    -moz-transition: @transition;
+    -ms-transition: @transition;
+    -o-transition: @transition;
+}
+.box-shadow(@shadow) {
+    -webkit-box-shadow: @shadow;
+    -moz-box-shadow: @shadow;
+    box-shadow: @shadow;
+}
+.box-sizing(@sizing) {
+    -webkit-box-sizing: @sizing;
+    -moz-box-sizing: @sizing;
+    box-sizing: @sizing;
+}
+.placeholder(@rules) {
+    &::-webkit-input-placeholder {
+        @rules();
+    }
+    &:-moz-placeholder {
+        @rules();
+    }
+    &::-moz-placeholder {
+        @rules();
+    }
+    &:-ms-input-placeholder {
+        @rules();
+    }
+}
+.green_gradient() {
+    background: #e5fac0;
+    /* Old browsers */
+    
+    background: -moz-linear-gradient(left, #e5fac0 0%, #bddcb0 100%);
+    /* FF3.6-15 */
+    
+    background: -webkit-linear-gradient(left, #e5fac0 0%, #bddcb0 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    
+    background: linear-gradient(to right, #e5fac0 0%, #bddcb0 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    
+   
+    /* IE6-9 */
+}
+.yellow_gradient() {
+    background: #fef5cd;
+    /* Old browsers */
+    
+    background: -moz-linear-gradient(left, #fef5cd 0%, #fed3b9 100%);
+    /* FF3.6-15 */
+    
+    background: -webkit-linear-gradient(left, #fef5cd 0%, #fed3b9 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    
+    background: linear-gradient(to right, #fef5cd 0%, #fed3b9 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    
+    
+}
+.pink_gradient() {
+    background: #fdcbcf;
+    /* Old browsers */
+    
+    background: -moz-linear-gradient(left, #fdcbcf 0%, #e4b4bb 100%);
+    /* FF3.6-15 */
+    
+    background: -webkit-linear-gradient(left, #fdcbcf 0%, #e4b4bb 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    
+    background: linear-gradient(to right, #fdcbcf 0%, #e4b4bb 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    
+    
+}
+.violet_gradient() {
+    background: #f0d2f4;
+    /* Old browsers */
+    
+    background: -moz-linear-gradient(left, #f0d2f4 0%, #c0bbe6 100%);
+    /* FF3.6-15 */
+    
+    background: -webkit-linear-gradient(left, #f0d2f4 0%, #c0bbe6 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    
+    background: linear-gradient(to right, #f0d2f4 0%, #c0bbe6 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    
+   
+}
+.animation(@animation) {
+    -khtml-animation: @animation;
+    -moz-animation: @animation;
+    -ms-animation: @animation;
+    -o-animation: @animation;
+    -webkit-animation: @animation;
+    animation: @animation;
+}
+.animation_delay(@delay) {
+    -khtml-animation-delay: @delay;
+    -moz-animation-delay: @delay;
+    -ms-animation-delay: @delay;
+    -o-animation-delay: @delay;
+    -webkit-animation-delay: @delay;
+    animation-delay: @delay;
+}
+.left_right() {
+    -webkit-animation: dude .95s 1 forwards;
+    -moz-animation: dude .95s 1 forwards;
+    -o-animation: dude .95s 1 forwards;
+    animation: dude .95s 1 forwards;
+}
+@-webkit-keyframes dude {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+@-webkit-keyframes flash {
+    0% {
+        opacity: .4;
+    }
+    100% {
+        opacity: 1;
+    }
+}

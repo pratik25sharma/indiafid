@@ -1,0 +1,87 @@
+@media screen and (max-width: 768px){
+	.wrapper{
+		padding: 0 20px;
+		overflow: auto;
+	}
+	header,.progress_bar, .register_form .login_display{
+		display: none;
+	}
+	.bn-viewport{
+		height: auto !important;
+		margin-top: 0;
+	}
+	.bn-viewport .info h1{
+		font-size: 30px;
+	}
+	.wm_whysellwithus ul li{
+		width: 100%;
+	}
+	.bn-viewport .info {
+	    margin-top: 0;
+	    padding: 100px 0;
+	}
+	.dashboard_summary .summary_content .business_details{
+		width: 48%;
+		margin: 1%;
+	}
+	.dashboard_summary .summary_content .business_details:last-child{
+		margin: 1%;
+	}
+	.dashboard_summary .summary_header .info{
+		width: 100%;
+	}
+	.popup_overlay .popup_box.seller_details{
+		width: 95%;
+		top: 60px;
+	}
+	.list_type .page_info .add_details{
+		position: relative;
+	    top: 0;
+	    right: 0;
+	    text-align: right;
+	}
+	.list_type .page_info .add_details .search_list {
+	    width: calc(100% - 170px);
+	    position: relative;
+	}
+	.list_type .page_info .add_details .search_list input[type="text"]{
+		border-radius: 0;
+	}
+	.list_type .page_info .add_details .search_list button{
+		border-radius: 0;
+	}
+	.popup_overlay .popup_box{
+		width: 90% !important;
+	}
+	.register_form .form_elements{
+		padding: 0;
+	}
+}
+@media screen and (max-width: 468px){
+	.dashboard_summary .summary_content .business_details{
+		width: 100%;
+		margin: 0 0 10px 0;
+	}
+	.dashboard_summary .summary_content .business_details:last-child{
+		margin: 0;
+	}
+	.list_type .listing_section .prod_info ul li{
+		width: 100%;
+		margin-bottom: 10px;
+	}
+	.list_type .listing_section .prod_info{
+		margin-bottom: 0;
+	}
+	.list_type .listing_section .sorting span{
+		display: none;
+	}
+	.list_type .listing_section .sorting select{
+		margin-bottom: 10px;
+	}
+	.list_type .listing_section .list_table{
+		overflow: auto;
+	}
+	.list_type .listing_section .sorting{
+		padding: 15px;
+	}
+}

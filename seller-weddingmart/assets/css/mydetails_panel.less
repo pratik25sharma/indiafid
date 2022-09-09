@@ -1,0 +1,393 @@
+@import url('common.less');
+@import url('res_common.less');
+body{
+    background-color: @bodycolor;
+}
+.mydetails_panel{
+max-width: 1366px;
+margin: auto;
+overflow: hidden;
+    .my_account{
+        display: none;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        background-color: @colorwhite;
+        .box-shadow(0px 0px 4px 0px rgba(0, 0, 0, 0.2));
+        z-index: 9;
+        span{
+            position: relative;
+            font-size: 18px;
+            font-weight: 700;
+            font-family: 'Lato', sans-serif;
+            display: block;
+            padding: 17px 18px 17px 56px;
+            i{
+                width: 20px;
+                height: 20px;
+                position: absolute;
+                left: 18px;
+                top: 19px;
+                background: url('http://images.shopclues.com/images/ui/cstmr_support_sprite.png') no-repeat -39px 1px;
+            }
+             em{
+                    width: 20px;
+                    height: 20px;
+                    position: absolute;
+                    right:18px;
+                    top:19px;
+                    background: url('http://images.shopclues.com/images/ui/cstmr_support_sprite.png?reset=h') no-repeat -37px -573px;
+                }
+        }
+    }
+    .left_panel{
+        width:290px;
+        background: @colorwhite; 
+        padding: 18px 0 19px;
+         .box-shadow( 0px 2px 3px 0px rgba(8, 8, 8, 0.1));
+         display: table-cell;
+         .merchant_info{
+            padding: 0 12px;
+            position: relative;
+            padding-left: 67px;
+            padding-bottom: 20px;
+            &:before{
+                content: '';
+                position: absolute;
+                width: 43px;
+                height: 42px;
+                left: 12px;
+                background: url('http://images.shopclues.com/images/ui/cstmr_support_sprite.png') no-repeat -141px 0;
+
+            }
+            h1{
+                font-size: 14px;
+                color: @black87;
+                font-family: 'Lato', sans-serif;
+                font-weight: 700;
+                padding-bottom: 0;
+                padding-top: 6px;
+                span{ display: block;
+                    font-size: 12px;
+                    color: @black54;
+                    padding-top: 4px;
+                }
+            }
+            &:after{
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 1px;
+                background-color: @gainsboro;
+            }
+         }
+         .merchant_tags{
+            padding: 10px 12px;
+            li{
+                a{
+                    font-size: 14px;
+                    color: @black87;
+                    font-family: 'Lato', sans-serif;
+                    font-weight: 500;
+                    text-decoration: none;
+                    position: relative;
+                    padding: 18px 0 18px 55px;
+                    display: block;
+                    &:before{
+                        content: '';
+                        width: 22px;
+                        height: 22px;
+                        position: absolute;
+                        left: 5px;
+                        top: 18px;
+                        background: url('http://images.shopclues.com/images/ui/cstmr_support_sprite.png?reset=c') no-repeat;
+                    }
+                    &.online_store{
+                        &:before{
+                            background-position: -161px -55px;
+                        }
+                    }
+                    &.contact{
+                        &:before{
+                            background-position: -161px -83px;
+                        }
+                    }
+                     &.business{
+                        &:before{
+                            background-position: -161px -112px;
+                        }
+                    }
+                      &.bank{
+                        &:before{
+                            background-position: -161px -147px;
+                        }
+                    }
+                     &.pickup{
+                        &:before{
+                            background-position: -161px -178px;
+                        }
+                    }
+                     &.change_password{
+                        &:before{
+                            background-position: -161px -205px;
+                        }
+                    }
+                    &.active{
+                        color: #44afc0;
+                    }
+                }
+            }
+         }
+         .logout{
+            display: none;
+            background-color: @colorwhite;
+            font-size: 14px;
+            color: @black87;
+            font-family: 'Lato', sans-serif;
+            font-weight: 500;
+            text-decoration: none;
+            position: relative;
+            padding: 18px 0 18px 67px;
+            margin-top: 12px;
+            .box-shadow(0px 1px 2px 0px rgba(8, 8, 8, 0.1));
+            .border-radius(2px);
+                &:before{
+                content: '';
+                width: 22px;
+                height: 22px;
+                position: absolute;
+                left: 18px;
+                top: 18px;
+                background: url('http://images.shopclues.com/images/ui/cstmr_support_sprite.png?reset=fdg') no-repeat;
+                background-position: -161px -289px;
+                }
+         }
+    }
+    .spacing{
+        width: 14px;
+        display: table-cell;
+    }
+    .right_panel{
+        width: 990px;
+        background: @colorwhite;
+        padding: 18px 22px;
+        display: table-cell;
+        .box-shadow( 0px 2px 3px 0px rgba(8, 8, 8, 0.1));
+        h1{
+            font-size: 14px;
+            font-weight: 700;
+        }
+        form{ display: inline-block;
+            position: relative;
+            ul{
+                li{
+                    span{
+                        display: inline-block;
+                        vertical-align: top;
+                        position: relative;
+                        label{
+                            width: 170px;
+                            font-size: 13px;
+                            font-family: 'Lato', sans-serif;
+                            font-weight: 400;
+                            color:@black54;
+                            display: block;
+                            padding: 9px 0;
+                        }
+                        input[type="text"], input[type="email"], input[type="password"],  textarea{
+                            width: 340px;
+                            font-size: 13px;
+                            color: @black87;
+                            font-weight: 700;
+                        }
+                        .common_dropdown{
+                            > a{
+                                width: 340px;
+                            }
+                            li{
+                                margin-bottom: 0;
+                                a{
+                                    color: @black87;
+                                    font-size: 13px;
+                                }
+                            }
+                        }
+                        &.logo{
+                            position: relative;
+                            vertical-align: middle;
+                            img{
+                                width: 55px;
+                                height: 55px;
+                                .border-radius(3px);
+                                float: left;
+                                margin-right: 20px;
+                            }
+                            input[type="file"]{
+                                opacity: 0;
+                                position: absolute;
+                                left: 60px;
+                                top: 11px;
+                                width: 120px;
+                                padding: 10px 0;
+                                cursor: pointer;
+                            }
+                            p{
+                                float: left;
+                                font-size: 13px;
+                                font-weight: 700;
+                                font-family: 'Lato', sans-serif;
+                                color: #4ebccb;
+                                padding: 16px 0;
+                                cursor: pointer;
+                            }
+                        }
+                        .half_input{
+                            max-width:340px;
+                            .grid6{
+                                width: 48%!important;
+                                margin-bottom: 0;
+                            }
+                            .common_dropdown{
+                                width: 48%;
+                                a{
+                                    width: 100%;
+                                    padding-right: 0;
+                                }
+                            }
+                        }
+                        &.pincode{
+                            label{
+                                width: inherit;
+                                padding: 0;
+                                padding-left: 25px;
+                                margin-top: 20px;
+                            }
+
+                        }
+                        
+                    }
+                    &.registerd{
+                        input{
+                            display: block;
+                            margin-bottom: 24px;
+                            &:last-child{
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
+                }
+            }
+            .orange_fill{
+                float: right;
+            }
+        }
+    }
+}
+
+@media screen and(max-width:768px){
+   .mydetails_panel{
+        .new_container{
+            .my_account{
+                display: block;
+            }
+            .left_panel{
+                display: none;
+                width: 100%;
+                .box-shadow(none);
+                background: none;
+                .merchant_info{
+                    background-color: @colorwhite;
+                    padding: 17px 10px 17px 67px;
+                    .border-radius(2px);
+                    .box-shadow(0px 1px 2px 0px rgba(8, 8, 8, 0.1));
+                    &:before{
+                        left: 15px;
+                    }
+                }
+                .logout{
+                    display: block;
+                }
+            }
+            .merchant_tags{
+                background-color: @colorwhite;
+                margin-top: 12px;
+                padding: 5px 13px;
+                .box-shadow(0px 1px 2px 0px rgba(8, 8, 8, 0.1));
+                .border-radius(2px);
+                li{
+                    a{
+                         padding: 15px 0 15px 54px;
+                        &:before{
+                                top: 15px;
+                        }
+                    }
+                 }
+            }
+            .right_panel{
+               width: 100%;
+               margin: 12px 0;
+               padding: 18px 20px;
+               display: block;
+               margin-top: 70px;
+               form{
+                display: block;
+                ul{
+                    li{
+                        span{
+                            width: 100%;
+                            input[type="text"], input[type="email"], input[type="password"],  textarea{
+                                width: 100%;
+                            }
+                            .half_input{
+                                width: 100%;
+                                max-width: inherit;
+                                .grid6{
+                                    width: 100%!important;
+                                    margin-bottom:10px!important;
+                                }
+                                
+                            }
+                            .common_dropdown{
+                                    width: 100%;
+                                    a{
+                                        width: inherit;
+                                    }
+                                }
+                        }
+                        &.registerd {
+                            .common_dropdown{
+                                margin-top: 10px;
+                            }
+                        }
+                        &.working_h{
+                            span{
+                                .half_input{
+                                    .grid6{
+                                        width: 48%!important;
+                                        &:last-child{
+                                            float: right;
+                                        }
+                                    }                                    
+                                }
+                            }
+                        }
+                    }
+                }
+                .input-row{
+                    margin-bottom: 10px;
+                }
+                .orange_fill{
+                    float: inherit;
+                    width: 100%;
+                    text-align: center;
+                    margin-top: 10px;
+                }
+               }
+
+            }
+        }
+   }
+}

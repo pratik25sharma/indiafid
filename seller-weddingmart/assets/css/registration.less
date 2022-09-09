@@ -1,0 +1,280 @@
+@import url('common.less');
+@import url('res_common.less');
+body{
+    background: url('../../images/registration.jpg') center center fixed no-repeat;
+    background-size: cover;
+}
+.registration{
+    .reg_header{
+        width: 100%;
+        background: @colorwhite;
+        height: 60px;
+        padding: 16px 36px;
+        .box-shadow(0px 2px 10px 0px rgba(0, 0, 0, 0.23));
+        img{
+            width: 152px;
+        }
+    }
+    .new_container{
+        position: relative;
+        max-width: 1366px;
+        margin: auto;
+        .login_slogans{
+            padding-top: 113px;
+            float: left;
+            h1{
+                font-size: 32px;
+                color: @colorwhite;
+                font-weight: 400;
+            }
+            p{
+                font-size: 16px;
+                line-height: 24px;
+                font-family: 'Lato', sans-serif;
+                color: @colorwhite;
+            }
+            &.create_unique_id_text{
+                max-width: 400px;
+            }
+        }
+        .login_panel{
+        width: 425px;
+        float: right;
+        .border-radius(2px);
+        background: @colorwhite;
+        position: relative;
+        right: 75px;
+        top: 75px;
+        padding: 23px 40px;
+        margin-bottom: 140px;
+            h2{
+                font-size: 22px;
+                font-weight: 400;
+                font-family: 'Lato', sans-serif;
+                padding-bottom: 20px;
+            }
+            h3{
+                font-family: 'Lato', sans-serif;
+                font-size: 18px;
+                font-weight: 700;
+                color: @black87;
+                padding-bottom: 20px;
+            }
+            p{
+                font-size: 13px;
+                color: @black54;
+                font-family: 'Lato', sans-serif;
+                padding: 10px 0;
+                &.otp{
+                padding-bottom: 25px;
+                b{
+                    color: @black87;
+                }
+                }
+            }
+            
+            .tab_header{
+                border: 0;
+                ul{
+                    li{
+                        a{
+                             font-size: 14px;
+                                padding: 10px 0px;
+                                font-weight: 400;
+                                margin-right: 30px;
+                            }
+                        &.selected{
+                            a{
+                            color: @neoncarrot;
+                            border-color: @neoncarrot;
+                            }
+                        }
+                    }
+                }
+            }
+            .create_account{
+                .input-row{
+                    input{
+                        width: 100%;
+                    }
+                }
+            }
+            &.creat_unique_id{
+                width: 768px;
+                .add_address{
+                    h1{
+                        margin-top: 50px;
+                    }
+                    .tow_input{
+                        display: inline-block;
+                        width: 48%;
+                    }
+                }
+            }
+             .pickup_addres_checkbox{
+
+                    p{
+                        margin-bottom: 10px;
+                        &.padding_top0{
+                            padding-top: 0;
+                        }
+                    }
+                    span{
+                        display: inline-block;
+                        margin-right: 20px;
+                        label{
+                            font-family: 'Lato', sans-serif;
+                            color: @black54;
+                        }                        
+                    }
+                }
+                .reg{
+                    margin-bottom: 30px;
+                    label{
+                       font-family: 'Lato', sans-serif;
+                       color: @black54; 
+                       font-size: 12px;
+                    }
+                }
+        }
+        .congratulation_popup{
+            max-width: 600px;
+            text-align: center;
+        }
+        .congratulation_popup{
+            padding: 60px 30px;
+            h1{
+                font-size: 18px;
+                margin-top: 15px;
+                padding-bottom: 10px;
+                
+            }
+            h3{
+                font-size: 14px;
+                font-family: 'Lato', sans-serif;
+                margin-bottom: 40px;
+                color: @black54;
+                font-weight: 400;
+            }
+        }
+    }
+    .need_help{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: @colorwhite;
+        text-align: center;
+        height: 40px;
+        p{
+            max-width: 1366px;
+            text-align: center;
+            color: @black87;
+            font-size: 14px;
+            line-height: 40px;
+            font-weight: 700;
+            margin: auto;
+            font-family: 'Lato', sans-serif;
+            a{
+                text-decoration: none;
+                color: @colorprimary;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1000px){
+    .registration{
+        .new_container{
+            padding-left: 15px;
+            padding-right: 15px;
+            .login_slogans{
+                padding-top: 30px;
+                padding-bottom: 25px;
+                h1{
+                    font-size: 16px;
+                    padding-bottom: 10px;
+                }
+                p{
+                    font-size: 13px;
+                }
+                &.create_unique_id_text{
+                    max-width: inherit;
+                }
+            }
+            .login_panel{
+                position: inherit;
+                left: inherit;
+                right: inherit;
+                margin:auto;
+                width: inherit;
+                top: inherit;
+                padding: 17px;
+                margin-bottom: 50px;
+                h2{
+                    font-size: 18px;
+                    padding-bottom: 14px;
+                }
+                p{
+                    padding: 5px 0;
+                }
+                .tab_header{
+                    ul{
+                        li{
+                            a{
+                                font-size: 13px;
+                            }
+                        }
+                    }
+                }
+                .res_grid12{
+                    text-align: center;
+                }
+                &.creat_unique_id{
+                    width: inherit;
+                    
+                    .add_address {
+                        .tow_input{
+                           display: inherit;
+                           width: inherit;
+                        }
+                    } 
+                }
+                .bottom_btn{
+                    a{
+                        text-align: center;
+                        width: 48%;
+                        float: left;
+                        &:last-child{
+                            float: right;
+                        }
+                        &.res_grid12{
+                            width: 100%;
+                        }
+                    }
+                    &:after{
+                        clear: both;
+                        display: table;
+                        content: '';
+                    }
+                }
+                form{
+                    .input-row{
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+            .congratulation_popup{
+                .bottom_btn{
+                    text-align: center;
+                }
+            }
+            .congratulation_popup{
+                max-width:95%;
+                padding: 30px;
+            }
+        }
+        
+    }
+}
+

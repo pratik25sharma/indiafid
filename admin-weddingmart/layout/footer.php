@@ -1,0 +1,4 @@
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" type="text/css"/><script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script><script src="<?php echo ASSET_URL; ?>js/jquery.validate.js"></script><script src="<?php echo ASSET_URL; ?>js/common.js"></script><script src="<?php echo ASSET_URL; ?>js/ckeditor.js"></script><script type="text/javascript">	var SITE_URL ="<?php echo SITE_URL ;?>";	if($(".users_table").length >0){		$('.users_table').DataTable({			"order": [],			"columnDefs": [ {			  "targets"  : 'no-sort',			  "orderable": false,			}],			"lengthChange": false		});	}	if($(".table-1").length >0){		$('.table-1').DataTable({			"order": [],			"columnDefs": [ {			  "targets"  : 'no-sort',			  "orderable": false,			}],			"lengthChange": false		});	}
+</script>
+</body>
+</html>

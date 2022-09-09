@@ -1,0 +1,9 @@
+Options +FollowSymLinks
+RewriteEngine on
+RewriteBase /
+RewriteRule ^(assets|css|ajax|uploads|favicon.ico)($|/) - [L]
+RewriteRule ^(.*)$ index.php?page=$1 [L,QSA]
+
+# php -- BEGIN cPanel-generated handler, do not edit
+# This domain inherits the “PHP” package.
+# php -- END cPanel-generated handler, do not edit
