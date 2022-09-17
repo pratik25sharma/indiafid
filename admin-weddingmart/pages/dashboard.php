@@ -170,15 +170,17 @@ $total=$result[0]['total'];
 
 $sql="select COUNT(*) AS totalVendors from users";
 $result=$crud->getData($sql);
-$totalVendors = $result[0]['totalVendors'];
+$totalVendors = 0;
 
 $sql="select COUNT(*) AS totalProducts from products";
 $result=$crud->getData($sql);
 $totalProducts = $result[0]['totalProducts'];
 
-$sql="select COUNT(*) AS totalEnquiries from user_enquiries";
+$sql="select COUNT(*) AS totalCategories from categories";
 $result=$crud->getData($sql);
-$totalEnquiries = $result[0]['totalEnquiries'];
+$totalCategories = $result[0]['totalCategories'];
+
+
 if($prevTotal >0){
 	$percentageDifference = ((($endTotal - $prevTotal) / $prevTotal) * 100);
 }else{
@@ -196,7 +198,7 @@ if($prevTotal >0){
                     </div>
                     <div class="info">
                         <p>
-                            Visitors on site
+                            Customers on site
                             <span><?php echo $total ;?></span>
                         </p>
                     </div>
@@ -208,7 +210,7 @@ if($prevTotal >0){
                     </div>
                     <div class="info">
                         <p>
-                            Vendores on site
+                            Orders on site
                             <span><?php echo $totalVendors ;?></span>
                         </p>
                     </div>
@@ -232,8 +234,8 @@ if($prevTotal >0){
                     </div>
                     <div class="info">
                         <p>
-                            Number of Enquiries
-                            <span><?php echo $totalEnquiries ;?></span>
+                            Categories on site
+                            <span><?php echo $totalCategories ;?></span>
                         </p>
                     </div>
                 </li>

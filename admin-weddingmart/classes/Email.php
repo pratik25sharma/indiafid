@@ -39,7 +39,7 @@ class Email
 //		  return true;
 //		}
 		$from_email = "support@weddingmart.co.in";
-        $from_fullname = "Wedding mart";
+        $from_fullname = "Fidus India";
         $headers = "MIME-Version: 1.0" . "\r\n";
         $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 

@@ -5,10 +5,10 @@ $page = isset($_GET['page']) ? $_GET['page'] : "";
 $page = isset($page) && !empty($page) ? str_replace('/','',$page) : "home";
 //call constant file to get urls
 require_once './common/constants.php';
-function __autoload($className) {
+spl_autoload_register( function($className) {
     include 'classes/'.$className . '.php';
-	
-}
+});
+
 if(($page == 'login') || ($page == 'online_store') || ($page == 'bank_info') || ($page == 'contact') || ($page == 'business_details')){
 	
 }else{

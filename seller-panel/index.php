@@ -11,9 +11,10 @@ if(!file_exists('./pages/'.$page.'.php')){
 }
 //call constant file to get urls
 require_once './common/constants.php';
-function __autoload($className) {
+spl_autoload_register(function ($className) {
 	include 'classes/'.$className . '.php';
-}
+});
+
 if(($page == 'login') || ($page == 'registration') || ($page == 'faq') || ($page == 'info') || ($page == 'cron') ){
 
 }else{

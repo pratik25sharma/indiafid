@@ -5,6 +5,7 @@ $data=array(
 'email'=>$_POST['email'],
 'password'=>$_POST['password'],
 );
+
 $fields = array('email','password');
 $validation = new Validation;
 $message=$validation->check_empty($data,$fields);
@@ -22,6 +23,7 @@ $email=$crud->escape_string($email);
 $password=$crud->escape_string($password);
 $sql="select * from users where email='$email' AND user_type=1";
 $result=$crud->getData($sql);
+
 if(!empty($result)){
 	session_start();
 	$_SESSION['user']=$result[0];
@@ -59,10 +61,10 @@ else{
 <div class="wrapper_page">
 	<div class="card_body">
 		<a href="javascript:void(0)" title="" class="logo">
-			<img src="<?php echo ASSET_URL ;?>/images/logo-c.png" alt="Wedding Mart Logo">
+			<!-- <img src="<?php echo ASSET_URL ;?>/images/logo-c.png" alt="Fidus India Logo"> -->
 		</a>
 		<div class="welcome_text">
-			<p>Welcome to <span>Wedding Mart</span>!</p>
+			<p>Welcome to <span>Fidus India</span>!</p>
 		</div>
 		<div class="form_element">
 			<form class="form-signin" action ="" method="post" id="testform">
