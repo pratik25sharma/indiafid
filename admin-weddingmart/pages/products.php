@@ -48,8 +48,7 @@
 				<td>{$res['name']}</td>
 				<td>{$res['description']}</td>
 				<td>{$res['price']}</td>
-				<!--<td><a href='product_edit?id={$res['id']}' class='btn'><i class='fas fa-edit'></i>edit</a></td>-->
-				<td><a href='product_view?id={$res['id']}' class='btn'><i class='fas fa-edit'></i>View</a></td>
+				<td><a href='product_edit?id={$res['id']}' class='btn'><i class='fas fa-edit'></i>edit</a></td>
 				<!--<td ><a href='javascript:void(0)' data-id='{$res['id']}' class='dlt btn'><i class='fas fa-edit'></i>delete</a></td>-->
 			</tr>";
 		}

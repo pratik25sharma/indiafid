@@ -162,7 +162,8 @@ $(document).ready(function(){
 
 $(".dlt").on('click',function(){
 
-	var id= $(this).data("id");
+	var id = $(this).data("id");
+	var name = $(this).data("name") || 'product';
 
 	var txt = $(this).parent().parent();
 
@@ -172,13 +173,13 @@ url: SITE_URL+"/ajax/products_delete.php",
 
 method:'post',
 
-data:{delete_id:id},
+data:{delete_id:id, table:name},
 
 		success: function(result){
 
 		txt.remove();
 
-		alert('product delete');
+		alert(name + ' delete');
 
 }
 

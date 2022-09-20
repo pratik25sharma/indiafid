@@ -4,23 +4,23 @@ $success = '';
 
 $error='';			
 
-function __autoload($className) {
-
+spl_autoload_register(function($className) {
     include '../classes/'.$className . '.php';
-
-}
+});
 
     $crud = new Crud;
 
 	
 
-$txt=$_POST{'delete_id'};
+$txt=$_POST['delete_id'];
+$table = $_POST['table'] ? $_POST['table'] : 'products';
 
-$sql = "DELETE FROM products WHERE id=$txt";
+$sql = "DELETE FROM ".$table." WHERE id=$txt";
 
-   $result = $crud->delete($txt, 'products');
+   $result = $crud->execute($sql);
+   
 
-   $success = 'Successfully delete products';
+   $success = 'Successfully delete '. $table;
 
 	
 

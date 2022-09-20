@@ -87,6 +87,24 @@ if($page != 'login'){
 					</a>
 				</li>
 				<li>
+					<a href="<?php echo SITE_URL?>/brands">
+						<i class="fas fa-clipboard-list"></i>
+						Brands Lists
+					</a>
+				</li>
+				<li>
+					<a href="<?php echo SITE_URL?>/banner">
+						<i class="fas fa-clipboard-list"></i>
+						Banner Lists
+					</a>
+				</li>
+				<li>
+					<a href="<?php echo SITE_URL?>/newsletter">
+						<i class="fas fa-clipboard-list"></i>
+						Newsletter subscription
+					</a>
+				</li>
+				<li>
 					<a href="<?php echo SITE_URL?>/categories">
 						<i class="fas fa-bars"></i>
 						Categories
