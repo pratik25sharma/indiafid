@@ -1,0 +1,216 @@
+@import reset;
+@import variables;
+@import common;
+@import checkbox;
+
+.plp{
+    margin-top: 16px;
+    .wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    aside.filter{
+        display: inline-flex;
+        width: 250px;
+        padding: 16px;
+        border: 1px solid @colorborder;
+        flex-shrink: 0;
+        flex-wrap: wrap;
+        .border-radius(2px);
+        .filterBlocks{
+            width: 100%;
+            margin-bottom: 16px;
+            border-bottom: 1px solid @colorborder;
+            padding-bottom: 16px;
+            &:last-child{
+                margin: 0;
+                padding: 0;
+                border: none;
+            }
+            h2{
+                display: block;
+                font-size: 16px;
+                font-weight: 500;
+                color: @colortxt1;
+                margin-bottom: 12px;
+            }
+            ul{
+                li{
+                    list-style-type: none;
+                    a{
+                        display: block;
+                        padding: 5px 0;
+                        color: @colortxt1;
+                        .transition();
+                        &:hover{
+                            color: @brndcolor;
+                        }
+                    }
+                }
+            }
+            &.categories{
+                > ul{
+                    > li{
+                        ul{
+                            padding-left: 8px;
+                            li{
+                                a{
+                                    color: @brndcolor;
+                                    font-weight: 500;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .prod-items{
+        display: block;
+        position: relative;
+        width: calc(~ '100% - 270px');
+        background-color: @colorwhite;
+        padding: 16px;
+        .border-radius(4px);
+        border: 1px solid @colorborder;
+        h1{
+            display: block;
+            margin-bottom: 16px;
+            color: @colortxt1;
+            font-weight: 300;
+            font-size: 22px;
+            span{
+                display: inline-block;
+                font-size: 14px;
+            }
+        }
+        ul{
+            position: relative;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            li{
+                list-style-type: none;
+                width: 25%;
+                min-height: 295px;
+                height: auto;
+                display: inline-block;
+                text-align: center;
+                position: relative;
+                border: @colorwhite solid 1px;
+                .transition();
+                a{
+                    display: inline-block;
+                    padding: 15px 15px 0 15px;
+                    width: 100%;
+                    position: relative;
+                    .transition();
+                    img{
+                        max-width: 145px;
+                        height: 145px;
+                        margin: 0 auto;
+                        margin-top: 25px;
+                        background: url(//images.shopclues.com/images/ui/img_response_bg.png) no-repeat;
+                        background-size: contain;
+                        .transition();
+                    }
+                    .prodInfo{
+                        h4{
+                            display: inline-block;
+                            color: @colortxt1;
+                            margin: 12px 0px 3px 0px;
+                            font-weight: 500;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                            width: 100%;
+                            overflow: hidden;
+                            text-align: left;
+                        }
+                        .prodPrice{
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            padding: 5px 0;
+                            text-align:left;
+                            p.oldPrice{
+                                font-weight: 400;
+                                color: @colortxt2;
+                                text-align: left;
+                                text-decoration: line-through;
+                            }
+                            p.price{
+                                font-size: 16px;
+                                font-weight: 500;
+                                color: @brndcolor;
+                                text-align: left;
+                            }
+                        }
+                        p.discount{
+                            padding: 5px 0;
+                            border-top: 1px dashed @colorborder;
+                            color: @colorsuccess;
+                            display: flex;
+                            font-size: 12px;
+                            justify-content: space-between;
+                            margin-left: 3px;
+                            text-decoration: none;
+                            text-align: left;
+                        }
+                    }
+                }
+                &:hover{
+                    box-shadow: 0px 0px 13.35px 1.65px rgb(148, 148, 148, 0.23);
+                    //border: @brndcolor solid 1px;
+                }
+            }
+            button.slick-arrow {
+                position: absolute;
+                width: 36px;
+                height: 70px;
+                border: none;
+                background: @brndcolor;
+                top: 0;
+                bottom: 0;
+                margin: auto 0;
+                overflow: hidden;
+                text-indent: 100px;
+                z-index: 4;
+                .transition();
+                &.slick-next {
+                    right: -1px;
+                    .border-radius(3px 0px 0px 3px);
+                    &:after {
+                        left: 5px;
+                        background-position: -559px -90px;
+                    }
+                }
+                &.slick-prev {
+                    left: -1px;
+                    .border-radius(0px 3px 3px 0px);
+                    &:after {
+                        left: -5px;
+                        background-position: -520px -90px;
+                    }
+                }
+                &.slick-disabled {
+                    display: none !important;
+                }
+                &:after {
+                    position: absolute;
+                    width: 11px;
+                    height: 21px;
+                    content: '';
+                    display: inline-block;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                    background: url(//images.shopclues.com/images/ui/dkt_sprite_v3.png) no-repeat;
+                }
+            }
+        }
+    }
+}
