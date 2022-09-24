@@ -17,7 +17,7 @@ h2{
     margin-bottom: 15px;
     a{
         font-size: 14px;
-        color: @brndcolor;
+        color: @mnbrndcolor;
     }
 }
 section{
@@ -82,7 +82,7 @@ section{
                         p.price{
                             font-size: 16px;
                             font-weight: 500;
-                            color: @brndcolor;
+                            color: @mnbrndcolor;
                             text-align: left;
                         }
                     }
@@ -101,7 +101,7 @@ section{
             }
             &:hover{
                 box-shadow: 0px 11px 13.35px 1.65px rgb(148, 148, 148, 0.23);
-                border: @brndcolor solid 1px;
+                border: @mnbrndcolor solid 1px;
             }
         }
         button.slick-arrow {
@@ -109,7 +109,7 @@ section{
             width: 36px;
             height: 70px;
             border: none;
-            background: @brndcolor;
+            background: @mnbrndcolor;
             top: 0;
             bottom: 0;
             margin: auto 0;
@@ -153,3 +153,68 @@ section{
     }
 }
 
+
+
+footer{
+    background-color: @mnbg;
+    padding: 30px 0 0 0;
+    .wrapper{
+        display: flex;
+        justify-content: space-between;
+        .footerLinksWrap{
+            width: 30%;
+            .ques{
+                display: block;
+                margin-top: 25px;
+                p{
+                    color: @colorwhite;
+                    opacity: 0.8;
+                    line-height: 24px;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+    h2{
+        display: flex;
+        font-size: 22px;
+        font-weight: 700;
+        color: @colorwhite;
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+        border-bottom: 1px solid #293038;
+    }
+    .footerNav{
+        ul{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            width: 100%;
+            a{
+                display: inline-flex;
+                width: 50%;
+                color: @colorwhite;
+                text-decoration: none;
+                .transition();
+                padding: 7px 0;
+                &:hover{
+                    color: @brndcolor;
+                }
+            }
+        }
+    }
+    .footerBottom{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 0;
+        background-color: #232f3e;
+        margin-top: 30px;
+        p{
+            color: @colorwhite;
+            font-size: 14px;
+            opacity: 0.5;
+        }
+    }
+}
