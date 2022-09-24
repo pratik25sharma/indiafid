@@ -1,0 +1,341 @@
+@import reset;
+@import variables;
+@import common;
+@import header;
+
+.nav_banner{
+    display: flex;
+    justify-content: space-between;
+        margin-top: 16px;
+    nav{
+        display: inline-flex;
+        width: 30%;
+        background-color: @colorwhite;
+        .border-radius(4px);
+        > ul{
+            display: flex;
+            width: 100%;
+            flex-wrap: wrap;
+            > li{
+                list-style-type: none;
+                position: relative;
+                width: 100%;
+                > a{
+                    display: inline-block;
+                    width: 100%;
+                    padding: 10px;
+                    color: @colortxt1;
+                    font-weight: 500;
+                }
+                &:hover{
+                    background-color: @mnbrndcolor;
+                    color: @colorwhite;
+                    ul{
+                        opacity: 1;
+                        visibility: visible;
+                        right: -90%;
+                    }
+                    a{
+                        color: @colorwhite;
+                    }
+                }
+                &:last-child{
+                    margin-top: auto;
+                    a{
+                        border-bottom: none;
+                        background-color: @mnbg;
+                        color: @colorwhite;
+                        text-align: center;
+                    }
+                }
+                ul{
+                    opacity: 0;
+                    visibility: hidden;
+                    position: absolute;
+                    top: 0;
+                    background-color: @mnbrndcolor;
+                    width: 90%;
+                    right: -85%;
+                    z-index: 99;
+                    .transition();
+                    li{
+                        list-style-type: none;
+                        position: relative;
+                        a{
+                            display: inline-block;
+                            width: 100%;
+                            padding: 10px;
+                            color: @colorwhite;
+                            font-weight: 500;
+                            .transition();
+                            &:hover{
+                                color: @colorwhite;
+                                background-color: @mnbg;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .banner{
+        width: 69%;
+        .border-radius(4px);
+        overflow: hidden;
+        ul{
+            li{
+                list-style: none;
+                position: relative;
+                p{
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 10%;
+                    margin: auto;
+                    font-size: 36px;
+                    line-height: 48px;
+                    color: @colorwhite;
+                    font-weight: 500;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    z-index: 9;
+                }
+                &.slick-slide{
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+            .slick-next{
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 5%;
+                font-size: 36px;
+                color: @colorwhite;
+                z-index: 9;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .slick-prev{
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 5%;
+                font-size: 36px;
+                color: @colorwhite;
+                z-index: 9;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .slick-dots{
+                position: absolute;
+                bottom: 20px;
+                left: 0;
+                right: 0;
+                margin: auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 9;
+                li{
+                    margin: 0 2px;
+                    &:after{
+                        display: none;
+                    }
+                    button{
+                        position: relative;
+                        z-index: 9;
+                        background-color: @colorwhite;
+                        border: none;
+                        width: 10px;
+                        padding: 0;
+                        height: 10px;
+                        .border-radius(10px);
+                        overflow: hidden;
+                        text-indent: -9999999px;
+                    }
+                    &.slick-active{
+                        button{
+                            background-color: @mnbrndcolor;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.fidusindiaInfo{
+    ul{
+        display: flex;
+        justify-content: space-between;
+        li{
+            list-style-type: none;
+            padding: 16px;
+            .border-radius(4px);
+            background-color: @mnbrndcolor;
+            width: 32%;
+            p{
+                font-size: 16px;
+                font-weight: 500;
+                color: @colorwhite;
+                margin: 16px 0 8px 0;
+                line-height: 24px;
+            }
+            span{
+                display: block;
+                color: @colorwhite;
+            }
+            i{
+                display: inline-block;
+                width: 35px;
+                height: 35px;
+                font-size: 38px;
+                color: @colorwhite;
+            }
+        }
+    }
+}
+
+.fdiCategories{
+    ul{
+        display: flex;
+        justify-content: space-between;
+        li{
+            list-style: none;
+            width: 32%;
+            background-color: #ebebeb;
+            padding: 16px;
+            .border-radius(4px);
+            h4{
+                font-size: 22px;
+                line-height: 32px;
+                margin: 0 0 12px 0;
+                color: #b7b7b7;
+            }
+            a{
+                display: block;
+                color: @colortxt2;
+                .transition();
+                padding: 3px 0;
+                &:hover{
+                    color: @mnbrndcolor;
+                }
+                &.viewMore{
+                    color: @mnbrndcolor;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+
+.fdiBrandsDeals{
+    ul{
+        li{
+            display: inline-block;
+            list-style: none;
+            border: 1px solid @colorborder;
+            margin-right: 15px;
+            background-color: @colorwhite;
+            height: auto;
+            text-align: center;
+            img{
+                display: inline-block;
+                width: 150px;
+                height: 100px;
+                object-fit: contain;
+            }
+        }
+        .slick-dots{
+            text-align: center;
+            margin-top: 10px;
+            li{
+                border: none;
+                background-color: transparent;
+                margin: 0 1px;
+                button{
+                    position: relative;
+                    z-index: 9;
+                    background-color: @colorwhite;
+                    border: none;
+                    width: 10px;
+                    padding: 0;
+                    height: 10px;
+                    .border-radius(10px);
+                    overflow: hidden;
+                    text-indent: -9999999px;
+                    border: 1px solid @colorborder;
+                }
+                &.slick-active{
+                    button{
+                        background-color: @mnbrndcolor;
+                        border-color: @mnbrndcolor;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.newsletter{
+    width: 900px;
+    padding: 16px 24px;
+    .border-radius(4px);
+    background-color: rgba(233, 95, 67, 0.6);
+    margin: 0 auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    &:after{
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 64px;
+        margin: auto;
+        width: 30px;
+        height: 30px;
+        opacity: 0.4;
+        background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48IS0tISBGb250IEF3ZXNvbWUgUHJvIDYuMS4yIGJ5IEBmb250YXdlc29tZSAtIGh0dHBzOi8vZm9udGF3ZXNvbWUuY29tIExpY2Vuc2UgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbS9saWNlbnNlIChDb21tZXJjaWFsIExpY2Vuc2UpIENvcHlyaWdodCAyMDIyIEZvbnRpY29ucywgSW5jLiAtLT48cGF0aCBkPSJNMjU2IDQxNy4xYy0xNi4zOCAwLTMyLjg4LTQuMS00Ni44OC0xNS4xMkwwIDI1MC45djIxMy4xQzAgNDkwLjUgMjEuNSA1MTIgNDggNTEyaDQxNmMyNi41IDAgNDgtMjEuNSA0OC00Ny4xVjI1MC45bC0yMDkuMSAxNTEuMUMyODguOSA0MTIgMjcyLjQgNDE3LjEgMjU2IDQxNy4xek00OTMuNiAxNjNDNDg0LjggMTU2IDQ3Ni40IDE0OS41IDQ2NCAxNDAuMXYtNDQuMTJjMC0yNi41LTIxLjUtNDgtNDgtNDhsLTc3LjUgLjAwMTZjLTMuMTI1LTIuMjUtNS44NzUtNC4yNS05LjEyNS02LjVDMzEyLjYgMjkuMTMgMjc5LjMtLjM3MzIgMjU2IC4wMDE4QzIzMi44LS4zNzMyIDE5OS40IDI5LjEzIDE4Mi42IDQxLjVjLTMuMjUgMi4yNS02IDQuMjUtOS4xMjUgNi41TDk2IDQ4Yy0yNi41IDAtNDggMjEuNS00OCA0OHY0NC4xMkMzNS42MyAxNDkuNSAyNy4yNSAxNTYgMTguMzggMTYzQzYuNzUgMTcyIDAgMTg2IDAgMjAwLjh2MTAuNjJsOTYgNjkuMzdWOTZoMzIwdjE4NC43bDk2LTY5LjM3VjIwMC44QzUxMiAxODYgNTA1LjMgMTcyIDQ5My42IDE2M3pNMTc2IDI1NS4xaDE2MGM4LjgzNiAwIDE2LTcuMTY0IDE2LTE1LjFjMC04LjgzOC03LjE2NC0xNi0xNi0xNmgtMTYwYy04LjgzNiAwLTE2IDcuMTYyLTE2IDE2QzE2MCAyNDguOCAxNjcuMiAyNTUuMSAxNzYgMjU1LjF6TTE3NiAxOTEuMWgxNjBjOC44MzYgMCAxNi03LjE2NCAxNi0xNmMwLTguODM4LTcuMTY0LTE1LjEtMTYtMTUuMWgtMTYwYy04LjgzNiAwLTE2IDcuMTYyLTE2IDE1LjFDMTYwIDE4NC44IDE2Ny4yIDE5MS4xIDE3NiAxOTEuMXoiLz48L3N2Zz4=');
+        .rotate(-45deg);
+    }
+    .txt{
+        width: 50%;
+        p{
+            font-weight: 500;
+            line-height: 24px;
+            color: @colortxt1;
+        }
+        span{
+            display: block;
+            font-weight: 400;
+            color: @colortxt1;
+        }
+    }
+    form{
+        width: 50%;
+        input[type="text"]{
+            width: 200px;
+            height: 35px;
+            border: none;
+            padding: 0 8px;
+            color: @colortxt1;
+            .border-radius(4px 0 0 4px);
+        }
+        input[type="submit"]{
+            color: @colorwhite;
+            background-color: @mnbrndcolor;
+            width: 100px;
+            height: 35px;
+            .border-radius(0 4px 4px 0);
+            border: none;
+            margin-left: -4px;
+        }
+    }
+}
