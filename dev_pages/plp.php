@@ -11,6 +11,7 @@
         file_put_contents($outputFile, $cache["compiled"]);
     }
 ?>
+
 <html>
 <head>
 <meta charset="UTF-8">
