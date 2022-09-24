@@ -2,6 +2,7 @@
 @import variables;
 @import common;
 @import header;
+@import popup;
 
 .nav_banner{
     display: flex;
@@ -336,6 +337,103 @@
             .border-radius(0 4px 4px 0);
             border: none;
             margin-left: -4px;
+        }
+    }
+}
+
+.popup_box{
+    .model_box{
+        .model_box_child{
+            &.login{
+                width: 900px;
+                .loginpopup{
+                    display: flex;
+                    justify-content: space-between;
+                    width: 100%;
+                    .loginImg{
+                        width: 58%;
+                        img{
+                            max-width: 100%;
+                        }
+                    }
+                    .loginInfo{
+                        width: 40%;
+                        .loginScreen{
+                            display: flex;
+                            justify-content: center;
+                            flex-wrap: wrap;
+                            margin-bottom: 26px;
+                            i{
+                                width: 120px;
+                                margin-bottom: 16px;
+                                img{
+                                    max-width: 100%;
+                                }
+                            }
+                            input[type="text"]{
+                                width: 100%;
+                                height: 40px;
+                                .border-radius(4px);
+                                padding: 0 10px;
+                                color: @colortxt1;
+                                background-color: @colorwhite;
+                                margin-bottom: 8px;
+                                border: 1px solid @colorborder;
+                            }
+                            input[type="submit"]{
+                                width: 100%;
+                                height: 40px;
+                                .border-radius(4px);
+                                text-align: center;
+                                color: @colorwhite;
+                                background-color: @mnbrndcolor;
+                                border: none;
+                            }
+                        }
+                        .loginWithOther{
+                            border-top: 1px solid @colorborder;
+                            padding-top: 26px;
+                            p{
+                                display: block;
+                                padding: 0 0 16px 0;
+                                font-size: 18px;
+                                font-weight: 500;
+                                color: @colortxt1;
+                                text-align: center;
+                            }
+                            ul{
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                li{
+                                    width: 49%;
+                                    list-style-type: none;
+                                    a{
+                                        display: inline-flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        width: 100%;
+                                        height: 50px;
+                                        .border-radius(10px);
+                                        font-size: 16px;
+                                        color: @colorwhite;
+                                        i{
+                                            margin-right: 16px;
+                                            font-size: 24px;
+                                        }
+                                        &.gmail{
+                                            background-color: #BB001B;
+                                        }
+                                        &.facebook{
+                                            background-color: #4267B2;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
